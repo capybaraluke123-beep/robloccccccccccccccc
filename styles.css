@@ -4,3 +4,25 @@
 .hero-image-frame{position:relative;z-index:2;width:390px;height:390px;border:10px solid var(--ink);background:#3560f5;transform:rotate(-7deg);box-shadow:13px 13px 0 var(--ink);overflow:hidden}.hero-image-frame img{width:100%;height:100%;object-fit:cover;display:block}.slides{padding-bottom:140px}.slides-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:35px}.slides h2{font-size:clamp(50px,6vw,78px);line-height:.88;letter-spacing:-.08em;margin:0}.slides h2 em{font-style:normal;color:var(--pink)}.slide-controls{display:flex;align-items:center;gap:12px;font:11px 'DM Mono'}.slide-controls button{width:42px;height:38px;border:2px solid var(--ink);background:var(--paper);font-size:20px;cursor:pointer}.slide-controls button:hover{background:var(--yellow)}.slide-window{overflow:hidden;border:3px solid var(--ink);background:var(--ink)}.slide-track{display:flex;transition:transform .45s ease}.build-slide{flex:0 0 100%;display:grid;grid-template-columns:1.35fr 1fr;min-height:350px;background:var(--blue)}.build-slide img{width:100%;height:100%;min-height:350px;object-fit:cover;display:block}.slide-copy{padding:38px 35px;background:var(--yellow);display:flex;flex-direction:column;justify-content:center}.slide-copy span{font:10px 'DM Mono';color:var(--pink)}.slide-copy h3{font-size:34px;line-height:.95;letter-spacing:-.06em;margin:18px 0 14px}.slide-copy p{line-height:1.45;margin:0;color:#4f4e56}.team-size-row{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--ink);margin-bottom:16px;padding-bottom:9px}.team-size-row label{font:10px 'DM Mono'}.team-size-row select{font:14px 'Space Grotesk';border:0;background:transparent;color:var(--ink);outline:0}.member-fields{display:grid;gap:10px;margin-bottom:18px}.member-card{border:2px solid rgba(16,18,31,.35);padding:12px;background:rgba(255,255,255,.18)}.member-card strong{display:block;font:10px 'DM Mono';margin-bottom:8px;color:#625d48}.member-card .member-inputs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.member-card input{width:100%;min-width:0;padding:9px 8px;border:1px solid rgba(16,18,31,.28);background:rgba(255,255,255,.45);font:12px 'Space Grotesk';outline:0}.signup form>.button{margin-top:2px}.form-error{color:#b83c62!important}
 .slides{padding-bottom:140px}
 @media(max-width:760px){.hero-image-frame{width:285px;height:285px}.slides-heading{display:block}.slide-controls{margin-top:22px}.build-slide{grid-template-columns:1fr}.build-slide img{min-height:220px;height:220px}.slide-copy{padding:26px}.slide-copy h3{font-size:28px}.signup-card{padding:35px 25px}.member-card .member-inputs{grid-template-columns:1fr}.signup form>.button{width:100%;justify-content:space-between}}
+/* Seamless highlight ticker */
+.ticker{mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:marquee 26s linear infinite}
+.ticker .ticker-group{display:block;flex:0 0 auto;padding-right:48px;animation:none}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* School page */
+.school-hero{padding-top:120px;padding-bottom:90px;display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end}
+.school-hero h1{font-size:clamp(58px,8vw,108px);line-height:.85;letter-spacing:-.09em;margin:20px 0 25px}
+.school-hero h1 em,.school-card h2 em{font-style:normal;color:var(--pink)}
+.school-hero p{max-width:480px;color:var(--muted);font-size:18px;line-height:1.5}
+.school-card{background:var(--blue);border:3px solid var(--ink);padding:35px;box-shadow:10px 10px 0 var(--ink)}
+.school-card h2{font-size:42px;line-height:.9;letter-spacing:-.07em;margin:0 0 25px}
+.school-card p{font-size:14px;line-height:1.5;margin:0 0 25px}
+.school-list{display:grid;gap:0;margin:0 0 25px;padding:0;list-style:none;border-top:1px solid rgba(16,18,31,.3)}
+.school-list li{padding:13px 0;border-bottom:1px solid rgba(16,18,31,.3);font:11px/1.4 'DM Mono'}
+.school-list li::before{content:'✦';color:var(--pink);margin-right:10px}
+.school-contact{padding:90px 0 130px}
+.school-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.school-contact h2{font-size:clamp(45px,6vw,72px);line-height:.88;letter-spacing:-.08em;margin:0}
+.school-contact p{max-width:450px;color:var(--muted);line-height:1.55}
+@media(max-width:760px){.school-hero,.school-contact-grid{grid-template-columns:1fr;gap:35px}.school-hero{padding-top:80px;padding-bottom:65px}.school-card{padding:25px;box-shadow:7px 7px 0 var(--ink)}.school-contact{padding:70px 0 90px}}
